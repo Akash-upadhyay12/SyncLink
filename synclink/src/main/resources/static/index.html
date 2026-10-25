@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SyncLink | Real-Time Chat</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="app-container">
+
+    <aside class="sidebar">
+
+        <div class="sidebar-header">
+            <div class="brand">
+                <div class="brand-icon">S</div>
+                <div>
+                    <h1>SyncLink</h1>
+                    <p>Connect. Chat. Collaborate.</p>
+                </div>
+            </div>
+
+            <button id="newChatButton" class="new-chat-button" type="button">
+                <span>+</span> New Chat
+            </button>
+        </div>
+
+        <div class="search-box">
+            <input
+                    type="search"
+                    id="chatSearch"
+                    placeholder="Search conversations..."
+                    aria-label="Search conversations"
+            >
+        </div>
+
+        <div class="section-label">YOUR CONVERSATIONS</div>
+
+        <div class="conversation-list" id="conversationList">
+
+            <div class="conversation active" data-chat-name="Alex Johnson">
+                <div class="avatar avatar-blue">A</div>
+                <div class="conversation-info">
+                    <div class="conversation-top">
+                        <h3>Alex Johnson</h3>
+                    </div>
+                    <p>Hey! How are you?</p>
+                </div>
+            </div>
+
+            <div class="conversation" data-chat-name="Team Sync">
+                <div class="avatar avatar-green">T</div>
+                <div class="conversation-info">
+                    <div class="conversation-top">
+                        <h3>Team Sync</h3>
+                    </div>
+                    <p>Meeting at 5 PM</p>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="sidebar-footer">
+            <div class="profile-avatar">S</div>
+            <div class="profile-info">
+                <h3>My Account</h3>
+                <p>SyncLink User</p>
+            </div>
+            <span class="online-dot"></span>
+        </div>
+
+    </aside>
+
+    <main class="chat-area">
+
+        <header class="chat-header">
+            <div class="avatar avatar-blue" id="headerAvatar">A</div>
+
+            <div class="header-info">
+                <h2 id="chatTitle">Alex Johnson</h2>
+                <p id="chatStatus">Online</p>
+            </div>
+
+            <button id="chatInfoButton" class="icon-button"
+                    type="button" aria-label="Chat information"
+                    title="Chat information">
+                &#9432;
+            </button>
+        </header>
+
+        <section class="messages" id="messages"
+                 aria-label="Chat messages" aria-live="polite">
+
+            <div class="date-divider">
+                <span>Today</span>
+            </div>
+
+        </section>
+
+        <div class="typing-indicator" id="typingIndicator">
+            Messages are stored in this demo session.
+        </div>
+
+        <form class="message-form" id="messageForm">
+            <input
+                    type="text"
+                    id="messageInput"
+                    placeholder="Type a message..."
+                    aria-label="Type a message"
+                    autocomplete="off"
+                    maxlength="2000"
+            >
+
+            <button type="submit" id="sendButton">
+                Send <span>&#10148;</span>
+            </button>
+        </form>
+
+        <footer class="chat-footer">
+            SyncLink · Real-time messaging experience
+        </footer>
+
+    </main>
+
+</div>
+
+<script src="app.js"></script>
+</body>
+</html>
